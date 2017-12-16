@@ -1,0 +1,16 @@
+{
+  "graphics": [{
+    "type": "atlas",
+    "key": "atlas",
+    "textureURL": "assets/tb.png",
+    "atlasURL": "assets/tb.json",
+    "format": "TEXTURE_ATLAS_JSON_ARRAY"
+  }],
+  "meta": {
+    "generated": "1513405498627",
+    "app": "Phaser Editor",
+    "url": "http://phasereditor.boniatillo.com",
+    "version": "1.0",
+    "copyright": "Arian Fornaris (c) 2015,2016"
+  }
+}
