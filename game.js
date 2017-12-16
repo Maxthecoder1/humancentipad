@@ -14,18 +14,16 @@ window.onload = function() {
     var imagename = 3;
     // basic phaser preload/create/update functions
 
-    var game = new Phaser.Game(canvasWidth, canvasHeight, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+    var game = new Phaser.Game(canvasWidth, canvasHeight, Phaser.AUTO, 'gameDiv', { preload: preload, create: create, update: update });
 
     function preload() {
-    //	game.load.script('joystick', 'phaser-virtual-joystick.min.js');
-      //  game.load.image('elephant', 'elephant.png');
-     //   game.load.image('apple', 'apple.png');
+   
     	game.load.atlas('dpad', 'assets/dpad.png', 'assets/dpad.json');
     	game.load.image("background", "assets/hct.jpg");
         game.load.atlasJSONArray('tb', 'assets/tb.png', 'assets/tb.json');
         game.load.audio('sfx1', 'assets/check.ogg');
         game.load.audio('sfx2', 'assets/done.ogg');
-        // game.load.spritesheet('characters', 'characters.png', 64, 64, 130);
+   
     }
 
     function create() {
@@ -42,7 +40,7 @@ window.onload = function() {
         stick.alignBottomRight(0);
     	fx1 = game.add.audio('sfx1');
     	fx2 = game.add.audio('sfx2');
-
+    	fx1.volume= 0.5;
         initSnake();
         placeRandomApple();
 
